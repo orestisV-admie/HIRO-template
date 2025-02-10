@@ -1,27 +1,22 @@
-In `pyproject.toml':
-```
-[tool.poetry]
-name = "template-python"
-version = "0.0.0"
-description = "Test Web service."
-readme = "README.md"
-authors = ["Orestis Vantzos <o.vantzos@admie.gr>"]
-license = "MIT"
-repository = "https://github.com/orestisV-admie/HIRO-template"
-homepage = "https://github.com/orestisV-admie/HIRO-template"
-packages = [{include = "*", from="app"}]
+1. Start a new repo using `HIRO-template` as the template - don't forget to set to *Private*.
 
-[tool.poetry.dependencies]
-python = "^3.10"
+2. Clone the repo:
+```
+git clone https://<token>@github.com/<user>/<repo>.git
 ```
 
+3. Initialise poetry:
 ```
 poetry config virtualenvs.in-project true
 poetry install --no-root --with dev,test
 poetry run pre-commit install
+```
+and run to check
+```
 poetry run uvicorn app.main:app
 ```
 
+4. Build the image?
 ```
 echo GHCR_PWD = <token>
 echo $GHCR_PWD | nerdctl login -u orestisV-admie --password-stdin ghcr.io
