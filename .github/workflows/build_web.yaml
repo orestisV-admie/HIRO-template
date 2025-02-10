@@ -25,6 +25,8 @@ jobs:
 
       - name: Install Helm
         uses: azure/setup-helm@v3
+        env:
+          GITHUB_TOKEN : ${{ github.token }}
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
