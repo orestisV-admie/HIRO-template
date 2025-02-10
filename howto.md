@@ -2,7 +2,7 @@
 
 2. Setup secrets and variables under *Settings->Secrets and Variables*:  
 `DOCKER_IMAGE_NAME` in Variables  
-`HELM_REPO_URL` in Secrets  
+`HELM_REPO_URL` in Secrets - set to `httep://<user>.github.io/helm_charts/`
 
 4. Clone the repo:
 ```
