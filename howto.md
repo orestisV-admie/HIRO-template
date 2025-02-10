@@ -1,8 +1,8 @@
 1. Start a new repo using `HIRO-template` as the template - don't forget to set to *Private*.
 
 2. Setup secrets and variables under *Settings->Secrets and Variables*:  
-`DOCKER_IMAGE_NAME` in Variables - set to `<user_all_small>/<repo name>`
-`HELM_REPO_URL` in Secrets - set to `https://<user>.github.io/helm_charts/`
+`DOCKER_IMAGE_NAME` in Variables - set to `<user_all_small>/<repo name>`  
+`HELM_REPO_URL` in Secrets - set to `https://<user>.github.io/helm_charts/`  
 
 4. Clone the repo:
 ```
