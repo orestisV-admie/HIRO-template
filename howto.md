@@ -1,8 +1,8 @@
 1. Start a new repo using `HIRO-template` as the template - don't forget to set to *Private*.
 
 2. Setup secrets and variables under *Settings->Secrets and Variables*:  
-`DOCKER_IMAGE_NAME` in Variables
-'HELM_REPO_URL' in Secrets
+`DOCKER_IMAGE_NAME` in Variables  
+'HELM_REPO_URL' in Secrets  
 
 4. Clone the repo:
 ```
