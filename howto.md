@@ -8,7 +8,7 @@ Create a `gh-pages` branch, and set Pages to point to it.
 1. Start a new repo using `HIRO-template` as the template - don't forget to set to *Private*.
 
 2. Setup secrets and variables under *Settings->Secrets and Variables*:   
-`HELM_TOKEN` in Secrets - store a token that has write access to helm repo
+`HELM_TOKEN` in Secrets - store a token that has write access to helm repo  
 `DOCKER_IMAGE_NAME` in Variables - set to `<user>/<repo name>`  
 `HELM_REPO` in Variables - set to `<helm_repo_name>`
 
