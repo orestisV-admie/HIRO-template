@@ -12,7 +12,7 @@ Create a `gh-pages` branch, and set Pages to point to it.
 `DOCKER_IMAGE_NAME` in Variables - set to `<user>/<repo name>`  
 `HELM_REPO` in Variables - set to `<helm_repo_name>`
 
-## Manually Deploy
+## Manually Build
 
 1. Clone the repo:
 ```
@@ -30,10 +30,22 @@ and run to check
 poetry run uvicorn app.main:app
 ```
 
-3. Build the image?
+3. Build and push the image
 ```
-echo GHCR_PWD = <token>
-echo $GHCR_PWD | nerdctl login -u orestisV-admie --password-stdin ghcr.io
-nerdctl image build . -t ghcr.io/orestisv-admie/testimage:latest
-nerdctl image push ghcr.io/orestisv-admie/testimage:latest
+export GHCR_PWD = <token>
+echo $GHCR_PWD | nerdctl login -u <github_user> --password-stdin ghcr.io
+nerdctl image build . -t ghcr.io/<github_user>/<image_name>:<tag>
+nerdctl image push ghcr.io/<github_user>/<image_name>:<tag>
+```
+
+## Manually Deploy from ghcr
+
+```
+export GHCR_PWD = <token>
+echo $GHCR_PWD | nerdctl login -u <github_user> --password-stdin ghcr.io
+nerdctl run -p 8080:80 <image_url>
+```
+and check that it runs:
+```
+curl http://localahost:8080
 ```
