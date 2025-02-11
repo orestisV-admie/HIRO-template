@@ -1,3 +1,10 @@
+## Public Helm Repo
+
+**If needed**, create a public repo for the helm charts.  
+Create a `gh-pages` branch, and set Pages to point to it.
+
+## Private FastAPI Repo
+
 1. Start a new repo using `HIRO-template` as the template - don't forget to set to *Private*.
 
 2. Setup secrets and variables under *Settings->Secrets and Variables*:  
