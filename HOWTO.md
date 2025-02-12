@@ -9,8 +9,12 @@ Create a `gh-pages` branch, and set Pages to point to it.
 
 2. Setup secrets and variables under *Settings->Secrets and Variables*:   
 `HELM_TOKEN` in Secrets - store a token that has write access to helm repo  
-`DOCKER_IMAGE_NAME` in Variables - set to `<user>/<repo name>`  
+`DOCKER_IMAGE_NAME` in Variables - set to `<user_all_lowercase>/<repo name>`  
 `HELM_REPO` in Variables - set to `<helm_repo_name>`
+
+3. The build of the initial commit will fail, since the necessary secrets/variables are not set.  
+If necessary re-run it from the Actions tab on github.
+
 
 ## Manually Build
 
